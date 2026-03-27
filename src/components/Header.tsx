@@ -7,11 +7,16 @@ const navLinks = [
   { label: "Formação", href: "#formacao" },
   { label: "Atuação", href: "#atuacao" },
   { label: "Especialidades", href: "#especialidades" },
-  { label: "Contato", href: "#contato" },
+  { label: "Contato", href: "#contato" }
 ];
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
+
+  const phone = "5587999763035";
+  const message = encodeURIComponent(
+    "Olá Dr. Jandir, gostaria de agendar uma consulta."
+  );
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/90 backdrop-blur-md border-b border-border">
@@ -32,7 +37,13 @@ const Header = () => {
             </a>
           ))}
           <Button asChild>
-            <a href="#contato">Agendar Consulta</a>
+            <a
+              href={`https://wa.me/${phone}?text=${message}`}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Agendar Consulta
+            </a>
           </Button>
         </nav>
 

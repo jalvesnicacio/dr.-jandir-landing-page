@@ -68,7 +68,7 @@ const Footer = () => {
               },
               {
                 icon: faGoogleScholar,
-                href: "https://scholar.google.com/",
+                href: "https://scholar.google.com/citations?user=vxvDj24AAAAJ&hl=pt-BR&oi=ao",
                 label: "Google Scholar"
               }
             ].map((social) => (
