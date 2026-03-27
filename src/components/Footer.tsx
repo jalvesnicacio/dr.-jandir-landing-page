@@ -6,7 +6,13 @@ import {
   Stethoscope
 } from "lucide-react";
 
-const Footer = ({ scrollToSection }) => {
+const Footer = () => {
+  const scrollToSection = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
   const footerNavItems = [
     { id: "inicio", label: "Início" },
     { id: "sobre", label: "Sobre Mim" },
