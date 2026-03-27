@@ -1,10 +1,6 @@
-import {
-  Instagram,
-  Facebook,
-  Linkedin,
-  Heart,
-  Stethoscope
-} from "lucide-react";
+import { Stethoscope } from "lucide-react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faInstagram, faFacebookF, faGoogleScholar } from "@fortawesome/free-brands-svg-icons";
 
 const Footer = () => {
   const scrollToSection = (id: string) => {
