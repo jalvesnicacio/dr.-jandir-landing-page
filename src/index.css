@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=DM+Sans:wght@300;400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=DM+Sans:wght@300;400;500;600;700&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -40,8 +40,8 @@
     --teal: 174 42% 38%;
     --blue: 200 82% 23%;
 
-    --font-display: 'Playfair Display', serif;
-    --font-body: 'DM Sans', sans-serif;
+    --font-display: "Playfair Display", serif;
+    --font-body: "DM Sans", sans-serif;
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
@@ -62,7 +62,12 @@
     @apply bg-background text-foreground;
     font-family: var(--font-body);
   }
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     font-family: var(--font-display);
   }
   html {
@@ -80,5 +85,14 @@
   }
   .section-subtitle {
     @apply text-muted-foreground text-lg max-w-2xl;
+  }
+
+  .section-quotation {
+    @apply text-xl italic text-secondary border-l-4 border-secondary pl-4;
+  }
+
+  /* span para destacar texto em uma caixa com borda de cantos arredondados */
+  .highlight {
+    @apply bg-secondary text-secondary-foreground px-2 py-1 rounded;
   }
 }

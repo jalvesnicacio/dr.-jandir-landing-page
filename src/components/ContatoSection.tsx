@@ -8,7 +8,12 @@ import { useToast } from "@/hooks/use-toast";
 
 const ContatoSection = () => {
   const { toast } = useToast();
-  const [formData, setFormData] = useState({ nome: "", email: "", telefone: "", mensagem: "" });
+  const [formData, setFormData] = useState({
+    nome: "",
+    email: "",
+    telefone: "",
+    mensagem: ""
+  });
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -16,8 +21,11 @@ const ContatoSection = () => {
     const body = encodeURIComponent(
       `Nome: ${formData.nome}\nEmail: ${formData.email}\nTelefone: ${formData.telefone}\n\nMensagem:\n${formData.mensagem}`
     );
-    window.location.href = `mailto:jandir.nicacio@email.com?subject=${subject}&body=${body}`;
-    toast({ title: "Redirecionando para seu email...", description: "Envie a mensagem pelo seu cliente de email." });
+    window.location.href = `mailto:jalves.nicacio@gmail.com?subject=${subject}&body=${body}`;
+    toast({
+      title: "Redirecionando para seu email...",
+      description: "Envie a mensagem pelo seu cliente de email."
+    });
     setFormData({ nome: "", email: "", telefone: "", mensagem: "" });
   };
 
@@ -32,7 +40,9 @@ const ContatoSection = () => {
           className="text-center mb-16"
         >
           <h2 className="section-title">Entre em Contato</h2>
-          <p className="section-subtitle mx-auto">Agende sua consulta ou tire suas dúvidas</p>
+          <p className="section-subtitle mx-auto">
+            Agende sua consulta ou tire suas dúvidas
+          </p>
         </motion.div>
 
         <div className="grid lg:grid-cols-2 gap-12">
@@ -46,10 +56,13 @@ const ContatoSection = () => {
           >
             <div className="space-y-4">
               {[
-                { icon: MapPin, text: "Rua Exemplo, 123 — Centro, Petrolina, PE" },
-                { icon: Phone, text: "(87) 99999-0000" },
-                { icon: Mail, text: "jandir.nicacio@email.com" },
-                { icon: Clock, text: "Seg a Sex: 8h às 18h | Sáb: 8h às 12h" },
+                {
+                  icon: MapPin,
+                  text: "Rua Tobias Barreto, 189, Centro, Petrolina - PE. CEP: 56304-210"
+                },
+                { icon: Phone, text: "+55 (87) 99976‑3035" },
+                { icon: Mail, text: "jandir.nicacio@univasf.edu.br" },
+                { icon: Clock, text: "Terça-feira: 13h às 18h" }
               ].map((item) => (
                 <div key={item.text} className="flex items-start gap-4">
                   <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
@@ -63,9 +76,9 @@ const ContatoSection = () => {
             <div className="rounded-2xl overflow-hidden border border-border shadow-sm mt-6">
               <iframe
                 title="Localização do consultório"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d62364.94896280276!2d-40.53!3d-9.39!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7763e4b1c9f6e7d%3A0x1c0a5e2b3d4f6a8!2sPetrolina%2C%20PE!5e0!3m2!1spt-BR!2sbr!4v1700000000000"
-                width="100%"
-                height="280"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3936.314589743763!2d-40.50364122402424!3d-9.393763598195116!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7737187ffcf5fab%3A0xe551b0780fdbf594!2sAfetus%20Especialidade!5e0!3m2!1spt-BR!2sbr!4v1774545991377!5m2!1spt-BR!2sbr"
+                width="600"
+                height="450"
                 style={{ border: 0 }}
                 allowFullScreen
                 loading="lazy"
@@ -81,14 +94,21 @@ const ContatoSection = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <form onSubmit={handleSubmit} className="bg-card rounded-2xl p-8 shadow-sm border border-border space-y-5">
-              <h3 className="text-xl font-bold text-foreground font-display mb-2">Envie uma mensagem</h3>
+            <form
+              onSubmit={handleSubmit}
+              className="bg-card rounded-2xl p-8 shadow-sm border border-border space-y-5"
+            >
+              <h3 className="text-xl font-bold text-foreground font-display mb-2">
+                Envie uma mensagem
+              </h3>
               <Input
                 placeholder="Seu nome"
                 required
                 maxLength={100}
                 value={formData.nome}
-                onChange={(e) => setFormData({ ...formData, nome: e.target.value })}
+                onChange={(e) =>
+                  setFormData({ ...formData, nome: e.target.value })
+                }
               />
               <Input
                 type="email"
@@ -96,14 +116,18 @@ const ContatoSection = () => {
                 required
                 maxLength={255}
                 value={formData.email}
-                onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                onChange={(e) =>
+                  setFormData({ ...formData, email: e.target.value })
+                }
               />
               <Input
                 type="tel"
                 placeholder="Seu telefone"
                 maxLength={20}
                 value={formData.telefone}
-                onChange={(e) => setFormData({ ...formData, telefone: e.target.value })}
+                onChange={(e) =>
+                  setFormData({ ...formData, telefone: e.target.value })
+                }
               />
               <Textarea
                 placeholder="Sua mensagem"
@@ -111,7 +135,9 @@ const ContatoSection = () => {
                 maxLength={1000}
                 rows={4}
                 value={formData.mensagem}
-                onChange={(e) => setFormData({ ...formData, mensagem: e.target.value })}
+                onChange={(e) =>
+                  setFormData({ ...formData, mensagem: e.target.value })
+                }
               />
               <Button type="submit" size="lg" className="w-full">
                 Enviar Mensagem

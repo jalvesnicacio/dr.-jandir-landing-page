@@ -4,19 +4,22 @@ import { Building2, Stethoscope, MapPin } from "lucide-react";
 const atuacoes = [
   {
     icon: Building2,
-    titulo: "Consultório Particular",
-    descricao: "Atendimento personalizado em consultório próprio no centro de Petrolina, PE.",
+    titulo: "Afetus Especialidade",
+    descricao:
+      "A Clínica Afetus Especialidades oferece uma experiência diferenciada à Saúde da Mulher!"
   },
   {
     icon: Stethoscope,
     titulo: "Atendimento Clínico",
-    descricao: "Consultas médicas completas com foco na saúde integral do paciente.",
+    descricao:
+      "Consultas médicas completas com foco na saúde integral do paciente."
   },
   {
     icon: MapPin,
     titulo: "Petrolina e Região",
-    descricao: "Atendendo pacientes de Petrolina, Juazeiro e toda região do Vale do São Francisco.",
-  },
+    descricao:
+      "Atendendo pacientes de Petrolina, Juazeiro e toda região do Vale do São Francisco."
+  }
 ];
 
 const AtuacaoSection = () => {
@@ -31,7 +34,9 @@ const AtuacaoSection = () => {
           className="text-center mb-16"
         >
           <h2 className="section-title">Atuação Profissional</h2>
-          <p className="section-subtitle mx-auto">Onde e como o Dr. Jandir atende seus pacientes</p>
+          <p className="section-subtitle mx-auto">
+            Onde e como o Dr. Jandir atende seus pacientes
+          </p>
         </motion.div>
 
         <div className="grid md:grid-cols-3 gap-8">
@@ -47,8 +52,12 @@ const AtuacaoSection = () => {
               <div className="w-14 h-14 rounded-xl bg-secondary/10 flex items-center justify-center mb-5 group-hover:bg-secondary/20 transition-colors">
                 <item.icon className="w-7 h-7 text-secondary" />
               </div>
-              <h3 className="text-xl font-bold text-foreground mb-3 font-display">{item.titulo}</h3>
-              <p className="text-muted-foreground leading-relaxed">{item.descricao}</p>
+              <h3 className="text-xl font-bold text-foreground mb-3 font-display">
+                {item.titulo}
+              </h3>
+              <p className="text-muted-foreground leading-relaxed">
+                {item.descricao}
+              </p>
             </motion.div>
           ))}
         </div>

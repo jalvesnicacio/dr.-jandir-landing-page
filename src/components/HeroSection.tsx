@@ -19,9 +19,18 @@ const HeroSection = () => {
             <br />
             <span className="text-primary">Nicacio</span>
           </h1>
+          <h3 className="text-xl md:text-2xl font-semibold text-foreground mb-4">
+            Hematologista e Onco-Hematologista
+          </h3>
           <p className="text-muted-foreground text-lg md:text-xl max-w-lg mb-8 leading-relaxed">
-            Cuidado médico humanizado com excelência e dedicação. 
-            Sua saúde em boas mãos.
+            Sou o Dr. Jandir, médico hematologista e onco-hematologista,
+            comprometido em oferecer um atendimento humanizado para pacientes
+            com doenças do sangue e do sistema imunológico.
+          </p>
+          <p className="text-muted-foreground text-lg md:text-xl max-w-lg mb-8 leading-relaxed">
+            Aqui, você encontra informações sobre meu trabalho e como posso
+            ajudar no seu tratamento. Cuidado médico humanizado com excelência e
+            dedicação. Sua saúde em boas mãos.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <Button size="lg" asChild>
