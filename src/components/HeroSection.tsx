@@ -4,7 +4,10 @@ import heroImg from "@/assets/hero-doctor.jpg";
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-screen flex items-center pt-20 overflow-hidden">
+    <section
+      id="inicio"
+      className="relative min-h-screen flex items-center pt-20 overflow-hidden"
+    >
       <div className="container mx-auto grid md:grid-cols-2 gap-12 items-center section-padding">
         <motion.div
           initial={{ opacity: 0, y: 40 }}

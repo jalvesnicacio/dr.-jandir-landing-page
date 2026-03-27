@@ -1,6 +1,10 @@
 import { Stethoscope } from "lucide-react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faInstagram, faFacebookF, faGoogleScholar } from "@fortawesome/free-brands-svg-icons";
+import {
+  faInstagram,
+  faFacebookF,
+  faGoogleScholar
+} from "@fortawesome/free-brands-svg-icons";
 
 const Footer = () => {
   const scrollToSection = (id: string) => {
@@ -12,7 +16,7 @@ const Footer = () => {
   const footerNavItems = [
     { id: "inicio", label: "Início" },
     { id: "sobre", label: "Sobre Mim" },
-    { id: "academic", label: "Formação Acadêmica" },
+    { id: "formacao", label: "Formação Acadêmica" },
     { id: "especialidades", label: "Especialidades" }
   ];
   return (
