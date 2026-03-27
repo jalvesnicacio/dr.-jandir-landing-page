@@ -89,7 +89,15 @@ const Footer = () => {
         <div className="border-t border-primary-foreground/10 mt-8 pt-6 text-center">
           <p className="text-primary-foreground/50 text-sm">
             © {new Date().getFullYear()} Dr. Jandir Nicacio. Todos os direitos
-            reservados.
+            reservados. Vibe coded by{" "}
+            <a
+              href="https://portfolio.jalvesnicacio.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-primary-foreground/70 hover:text-primary-foreground/90 transition-colors"
+            >
+              Jalves Nicacio.
+            </a>
           </p>
         </div>
       </div>
