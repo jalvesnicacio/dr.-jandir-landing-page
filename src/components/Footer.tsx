@@ -76,7 +76,7 @@ const Footer = () => {
                 aria-label={social.label}
                 className="w-10 h-10 rounded-full bg-primary-foreground/10 flex items-center justify-center hover:bg-primary-foreground/20 transition-colors"
               >
-                <social.icon className="w-5 h-5" />
+                <FontAwesomeIcon icon={social.icon} className="w-5 h-5" />
               </a>
             ))}
           </div>
