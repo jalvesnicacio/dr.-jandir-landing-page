@@ -1,10 +1,6 @@
-import {
-  Instagram,
-  Facebook,
-  Linkedin,
-  Heart,
-  Stethoscope
-} from "lucide-react";
+import { Stethoscope } from "lucide-react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faInstagram, faFacebookF, faGoogleScholar } from "@fortawesome/free-brands-svg-icons";
 
 const Footer = () => {
   const scrollToSection = (id: string) => {
@@ -57,19 +53,19 @@ const Footer = () => {
           <div className="flex items-center gap-4">
             {[
               {
-                icon: Instagram,
+                icon: faInstagram,
                 href: "https://instagram.com/jandirnicacio",
                 label: "Instagram"
               },
               {
-                icon: Facebook,
+                icon: faFacebookF,
                 href: "https://facebook.com/jandirnicacio",
                 label: "Facebook"
               },
               {
-                icon: Linkedin,
-                href: "https://linkedin.com/",
-                label: "LinkedIn"
+                icon: faGoogleScholar,
+                href: "https://scholar.google.com/",
+                label: "Google Scholar"
               }
             ].map((social) => (
               <a
@@ -80,7 +76,7 @@ const Footer = () => {
                 aria-label={social.label}
                 className="w-10 h-10 rounded-full bg-primary-foreground/10 flex items-center justify-center hover:bg-primary-foreground/20 transition-colors"
               >
-                <social.icon className="w-5 h-5" />
+                <FontAwesomeIcon icon={social.icon} className="w-5 h-5" />
               </a>
             ))}
           </div>
