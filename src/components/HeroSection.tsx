@@ -3,6 +3,10 @@ import { Button } from "@/components/ui/button";
 import heroImg from "@/assets/hero-doctor.jpg";
 
 const HeroSection = () => {
+  const phone = "5587999763035";
+  const message = encodeURIComponent(
+    "Olá, gostaria de agendar uma consulta com o Dr. Jandir Nicacio."
+  );
   return (
     <section
       id="inicio"
@@ -37,7 +41,13 @@ const HeroSection = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <Button size="lg" asChild>
-              <a href="#contato">Agendar Consulta</a>
+              <a
+                href={`https://wa.me/${phone}?text=${message}`}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Agendar Consulta
+              </a>
             </Button>
             <Button size="lg" variant="outline" asChild>
               <a href="#sobre">Conheça o Doutor</a>
