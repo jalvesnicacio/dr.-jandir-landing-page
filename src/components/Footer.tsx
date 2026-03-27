@@ -1,20 +1,70 @@
-import { Instagram, Facebook, Linkedin } from "lucide-react";
+import {
+  Instagram,
+  Facebook,
+  Linkedin,
+  Heart,
+  Stethoscope
+} from "lucide-react";
 
-const Footer = () => {
+const Footer = ({ scrollToSection }) => {
+  const footerNavItems = [
+    { id: "inicio", label: "Início" },
+    { id: "sobre", label: "Sobre Mim" },
+    { id: "academic", label: "Formação Acadêmica" },
+    { id: "especialidades", label: "Especialidades" }
+  ];
   return (
     <footer className="bg-foreground text-primary-foreground py-12 px-4">
       <div className="container mx-auto">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           <div>
-            <p className="font-display text-xl font-bold">Dr. Jandir Nicacio</p>
-            <p className="text-primary-foreground/60 text-sm mt-1">Médico — Petrolina, PE</p>
+            <div className="flex items-center space-x-2 mb-4">
+              <Stethoscope className="h-8 w-8 text-blue-400" />
+              <span className="text-xl font-bold">Dr. Jandir Nicacio</span>
+            </div>
+            <p className="text-gray-400 mb-4">
+              Hematologista dedicado ao cuidado humanizado e tratamento de
+              excelência.
+            </p>
+            <p className="text-primary-foreground/60 text-sm mt-1">
+              CRM-PE 23006 — Petrolina, PE
+            </p>
+          </div>
+
+          <div>
+            <span className="text-lg font-semibold mb-4 block">
+              Links Rápidos
+            </span>
+            <div className="space-y-2">
+              {footerNavItems.map((item) => (
+                <button
+                  key={item.id}
+                  onClick={() => scrollToSection(item.id)}
+                  className="block text-gray-400 hover:text-white transition-colors"
+                >
+                  {item.label}
+                </button>
+              ))}
+            </div>
           </div>
 
           <div className="flex items-center gap-4">
             {[
-              { icon: Instagram, href: "https://instagram.com/", label: "Instagram" },
-              { icon: Facebook, href: "https://facebook.com/", label: "Facebook" },
-              { icon: Linkedin, href: "https://linkedin.com/", label: "LinkedIn" },
+              {
+                icon: Instagram,
+                href: "https://instagram.com/jandirnicacio",
+                label: "Instagram"
+              },
+              {
+                icon: Facebook,
+                href: "https://facebook.com/jandirnicacio",
+                label: "Facebook"
+              },
+              {
+                icon: Linkedin,
+                href: "https://linkedin.com/",
+                label: "LinkedIn"
+              }
             ].map((social) => (
               <a
                 key={social.label}
@@ -32,7 +82,8 @@ const Footer = () => {
 
         <div className="border-t border-primary-foreground/10 mt-8 pt-6 text-center">
           <p className="text-primary-foreground/50 text-sm">
-            © {new Date().getFullYear()} Dr. Jandir Nicacio. Todos os direitos reservados.
+            © {new Date().getFullYear()} Dr. Jandir Nicacio. Todos os direitos
+            reservados.
           </p>
         </div>
       </div>
