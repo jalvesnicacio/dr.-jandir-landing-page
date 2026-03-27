@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import heroImg from "@/assets/hero-doctor.jpg";
+import heroImg from "@/assets/hero-drjandir.png";
 
 const HeroSection = () => {
   const phone = "5587999763035";
