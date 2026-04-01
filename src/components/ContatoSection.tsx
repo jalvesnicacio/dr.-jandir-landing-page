@@ -77,8 +77,7 @@ const ContatoSection = () => {
               <iframe
                 title="Localização do consultório"
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3936.314589743763!2d-40.50364122402424!3d-9.393763598195116!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7737187ffcf5fab%3A0xe551b0780fdbf594!2sAfetus%20Especialidade!5e0!3m2!1spt-BR!2sbr!4v1774545991377!5m2!1spt-BR!2sbr"
-                width="600"
-                height="450"
+                className="w-full aspect-video"
                 style={{ border: 0 }}
                 allowFullScreen
                 loading="lazy"
