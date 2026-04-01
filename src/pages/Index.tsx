@@ -18,6 +18,7 @@ const Index = () => {
       <FormacaoSection />
       <AtuacaoSection />
       <EspecialidadesSection />
+      <FAQSection />
       <ContatoSection />
       <Footer />
       <WhatsAppButton />
