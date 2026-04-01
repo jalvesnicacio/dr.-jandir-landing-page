@@ -12,7 +12,7 @@ const SobreSection = () => {
   return (
     <section id="sobre" className="section-padding bg-muted/50">
       <div className="container mx-auto">
-        <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
+        <div className="flex flex-col-reverse md:grid md:grid-cols-2 gap-12 items-center mb-16">
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
