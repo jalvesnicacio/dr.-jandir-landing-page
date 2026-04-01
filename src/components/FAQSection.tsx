@@ -26,7 +26,7 @@ const perguntas = [
 
 const FAQSection = () => {
   return (
-    <section id="faq" className="section-padding bg-muted/50">
+    <section id="faq" className="section-padding">
       <div className="container mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
