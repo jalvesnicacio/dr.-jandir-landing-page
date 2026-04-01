@@ -1,5 +1,11 @@
 import { motion } from "framer-motion";
-import { Building2, Stethoscope, MapPin } from "lucide-react";
+import {
+  Building2,
+  Stethoscope,
+  MapPin,
+  Hospital,
+  GraduationCap
+} from "lucide-react";
 
 const atuacoes = [
   {
@@ -9,16 +15,28 @@ const atuacoes = [
       "A Clínica Afetus Especialidades oferece uma experiência diferenciada à Saúde da Mulher!"
   },
   {
-    icon: Stethoscope,
-    titulo: "Atendimento Clínico",
+    icon: Hospital,
+    titulo: "Sistema Único de Saúde (SUS)",
     descricao:
-      "Consultas médicas completas com foco na saúde integral do paciente."
+      "Médico Hematologista no Hospital Universitário da Universidade Federal do Vale do São Francisco"
+  },
+  {
+    icon: Hospital,
+    titulo: "Sistema Único de Saúde (SUS)",
+    descricao:
+      "Médico Onco hematologista no Hospital Oncológico Dom Tomás (Petrolina-PE)"
+  },
+  {
+    icon: GraduationCap,
+    titulo: "Univasf-PE",
+    descricao:
+      "Professor do Curso de Medicina da UNIVASF-PE e Preceptor do Programa de Clínica Médica."
   },
   {
     icon: MapPin,
     titulo: "Petrolina e Região",
     descricao:
-      "Atendendo pacientes de Petrolina, Juazeiro e toda região do Vale do São Francisco."
+      "Atendimento por convênios e pelo SUS. Pacientes de Petrolina, Juazeiro e toda região do Vale do São Francisco."
   }
 ];
 

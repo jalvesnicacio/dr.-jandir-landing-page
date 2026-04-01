@@ -27,7 +27,7 @@ const HeroSection = () => {
             <span className="text-primary">Nicacio</span>
           </h1>
           <h3 className="text-xl md:text-2xl font-semibold text-foreground mb-4">
-            Hematologista e Onco-Hematologista
+            Hematologista com ênfase em Coagulopatias e Onco-Hematologia
           </h3>
           <p className="text-muted-foreground text-lg md:text-xl max-w-lg mb-8 leading-relaxed">
             Sou o Dr. Jandir, médico hematologista e onco-hematologista,

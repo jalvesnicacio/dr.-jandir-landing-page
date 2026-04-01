@@ -1,13 +1,13 @@
 import { motion } from "framer-motion";
-import { Activity, Brain, Bone, Eye, HeartPulse, Pill } from "lucide-react";
+import { Dna, Microscope, Stethoscope } from "lucide-react";
 
 const especialidades = [
-  { icon: HeartPulse, nome: "Clínica Geral" },
-  { icon: Brain, nome: "Neurologia" },
-  { icon: Activity, nome: "Cardiologia" },
-  { icon: Bone, nome: "Ortopedia" },
-  { icon: Eye, nome: "Oftalmologia" },
-  { icon: Pill, nome: "Medicina Preventiva" },
+  {
+    icon: Microscope,
+    nome: "Hematologia e Coagulopatias"
+  },
+  { icon: Dna, nome: "Onco-hematologia" },
+  { icon: Stethoscope, nome: "Investigação Diagnóstica" }
 ];
 
 const EspecialidadesSection = () => {
@@ -22,7 +22,9 @@ const EspecialidadesSection = () => {
           className="text-center mb-16"
         >
           <h2 className="section-title">Especialidades</h2>
-          <p className="section-subtitle mx-auto">Áreas de atuação e expertise médica</p>
+          <p className="section-subtitle mx-auto">
+            Áreas de atuação e expertise médica
+          </p>
         </motion.div>
 
         <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
