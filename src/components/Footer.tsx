@@ -22,7 +22,7 @@ const Footer = () => {
   return (
     <footer className="bg-foreground text-primary-foreground py-12 px-4">
       <div className="container mx-auto">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+        <div className="flex flex-col items-start md:flex-row md:items-center justify-between gap-6">
           <div>
             <div className="flex items-center space-x-2 mb-4">
               <Stethoscope className="h-8 w-8 text-blue-400" />
