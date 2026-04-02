@@ -32,7 +32,7 @@ const formacoes = [
   {
     ano: "2021 - 2025",
     titulo: "Doutorado em Ecologia Humana e Gestão Sócio Ambiental.",
-    instituicao: "Universidade Estadual do Sudoeste da Bahia - UESB"
+    instituicao: "Universidade Estadual da Bahia - UNEB"
   }
 ];
 
