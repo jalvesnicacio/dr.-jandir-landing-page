@@ -10,9 +10,15 @@ import {
 const atuacoes = [
   {
     icon: Building2,
+    titulo: "Cardiovasf",
+    descricao:
+      "Consultório particular de Hematologia e Clínica Médica no Instituto do Coração do Vale do São Francisco. Atendimento às quartas-feiras."
+  },
+  {
+    icon: Building2,
     titulo: "Afetus Especialidade",
     descricao:
-      "A Clínica Afetus Especialidades oferece uma experiência diferenciada à Saúde da Mulher!"
+      "Consultório particular na Clínica Afetus Especialidades, referência em Saúde da Mulher. Atendimento às terças-feiras."
   },
   {
     icon: Hospital,
@@ -53,7 +59,8 @@ const AtuacaoSection = () => {
         >
           <h2 className="section-title">Atuação Profissional</h2>
           <p className="section-subtitle mx-auto">
-            Onde e como o Dr. Jandir atende seus pacientes
+            Onde e como o Dr. Jandir atende seus pacientes, entre consultórios
+            particulares, ensino e o SUS
           </p>
         </motion.div>
 

@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { MapPin, Phone, Mail, Clock } from "lucide-react";
+import { MapPin, Phone, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -54,36 +54,47 @@ const ContatoSection = () => {
             transition={{ duration: 0.6 }}
             className="space-y-6"
           >
+            <p className="text-foreground/80 leading-relaxed">
+              Prefere falar diretamente ou já sabe qual consultório é mais
+              perto de você? Escolha a forma mais fácil de falar com a
+              equipe do Dr. Jandir.
+            </p>
+
             <div className="space-y-4">
               {[
                 {
-                  icon: MapPin,
-                  text: "Rua Tobias Barreto, 189, Centro, Petrolina - PE. CEP: 56304-210"
+                  icon: Phone,
+                  text: "+55 (87) 99976‑3035",
+                  href: "tel:+5587999763035"
                 },
-                { icon: Phone, text: "+55 (87) 99976‑3035" },
-                { icon: Mail, text: "jandir.nicacio@univasf.edu.br" },
-                { icon: Clock, text: "Terça-feira: 13h às 18h" }
+                {
+                  icon: Mail,
+                  text: "jandir.nicacio@univasf.edu.br",
+                  href: "mailto:jandir.nicacio@univasf.edu.br"
+                }
               ].map((item) => (
-                <div key={item.text} className="flex items-start gap-4">
-                  <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
+                <a
+                  key={item.text}
+                  href={item.href}
+                  className="flex items-start gap-4 group"
+                >
+                  <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center shrink-0 group-hover:bg-primary/20 transition-colors">
                     <item.icon className="w-5 h-5 text-primary" />
                   </div>
-                  <p className="text-foreground/80 pt-2">{item.text}</p>
-                </div>
+                  <p className="text-foreground/80 pt-2 group-hover:text-primary transition-colors">
+                    {item.text}
+                  </p>
+                </a>
               ))}
             </div>
 
-            <div className="rounded-2xl overflow-hidden border border-border shadow-sm mt-6">
-              <iframe
-                title="Localização do consultório"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3936.314589743763!2d-40.50364122402424!3d-9.393763598195116!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7737187ffcf5fab%3A0xe551b0780fdbf594!2sAfetus%20Especialidade!5e0!3m2!1spt-BR!2sbr!4v1774545991377!5m2!1spt-BR!2sbr"
-                className="w-full aspect-video"
-                style={{ border: 0 }}
-                allowFullScreen
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-              />
-            </div>
+            <a
+              href="#onde-atender"
+              className="inline-flex items-center gap-2 text-secondary font-medium hover:text-secondary/80 transition-colors"
+            >
+              <MapPin className="w-4 h-4" />
+              Ver consultórios e horários de atendimento
+            </a>
           </motion.div>
 
           {/* Form */}
