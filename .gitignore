@@ -12,6 +12,9 @@ dist
 dist-ssr
 *.local
 
+# Client-provided media not meant for the site/repo
+client-media/
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
