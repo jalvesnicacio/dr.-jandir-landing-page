@@ -6,6 +6,8 @@ import { Textarea } from "@/components/ui/textarea";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 
+const FORMSPREE_ENDPOINT = "https://formspree.io/f/mrenvdgl";
+
 const ContatoSection = () => {
   const { toast } = useToast();
   const [formData, setFormData] = useState({
@@ -14,19 +16,44 @@ const ContatoSection = () => {
     telefone: "",
     mensagem: ""
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    const subject = encodeURIComponent("Contato via Site - Dr. Jandir Nicacio");
-    const body = encodeURIComponent(
-      `Nome: ${formData.nome}\nEmail: ${formData.email}\nTelefone: ${formData.telefone}\n\nMensagem:\n${formData.mensagem}`
-    );
-    window.location.href = `mailto:jalves.nicacio@gmail.com?subject=${subject}&body=${body}`;
-    toast({
-      title: "Redirecionando para seu email...",
-      description: "Envie a mensagem pelo seu cliente de email."
-    });
-    setFormData({ nome: "", email: "", telefone: "", mensagem: "" });
+    setIsSubmitting(true);
+
+    try {
+      const response = await fetch(FORMSPREE_ENDPOINT, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json"
+        },
+        body: JSON.stringify({
+          nome: formData.nome,
+          email: formData.email,
+          telefone: formData.telefone,
+          mensagem: formData.mensagem,
+          _subject: "Contato via Site - Dr. Jandir Nicacio"
+        })
+      });
+
+      if (!response.ok) throw new Error("Falha no envio");
+
+      toast({
+        title: "Mensagem enviada!",
+        description: "Obrigado pelo contato, retornaremos em breve."
+      });
+      setFormData({ nome: "", email: "", telefone: "", mensagem: "" });
+    } catch {
+      toast({
+        variant: "destructive",
+        title: "Não foi possível enviar",
+        description: "Tente novamente ou fale pelo telefone/WhatsApp."
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -149,8 +176,13 @@ const ContatoSection = () => {
                   setFormData({ ...formData, mensagem: e.target.value })
                 }
               />
-              <Button type="submit" size="lg" className="w-full">
-                Enviar Mensagem
+              <Button
+                type="submit"
+                size="lg"
+                className="w-full"
+                disabled={isSubmitting}
+              >
+                {isSubmitting ? "Enviando..." : "Enviar Mensagem"}
               </Button>
             </form>
           </motion.div>
